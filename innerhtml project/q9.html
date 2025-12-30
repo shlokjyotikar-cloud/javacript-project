@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Square Star Pattern</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+
+<div class="card shadow p-4 text-center" style="width: 350px;">
+  <h3 class="card-title mb-3">5×5 Star Pattern</h3>
+  <button class="btn btn-success mb-3" onclick="printSquare()">Show Pattern</button>
+  <pre id="output" class="fs-5 text-start"></pre>
+</div>
+
+<script>
+function printSquare() {
+  let rows = 5;
+  let cols = 5;
+  let output = "";
+  let i = 0;
+
+  while (i < rows) {
+    let j = 0;
+    while (j < cols) {
+      output += "* ";
+      j++;
+    }
+    output += "\n"; // New line for each row
+    i++;
+  }
+
+  document.getElementById("output").textContent = output;
+}
+</script>
+
+</body>
+</html>

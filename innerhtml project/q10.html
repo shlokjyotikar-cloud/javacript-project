@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Right Angle Triangle Star Pattern</title>
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+
+<div class="card shadow p-4 text-center" style="width: 350px;">
+  <h3 class="card-title mb-3">Right Angle Triangle Star Pattern</h3>
+  <button class="btn btn-success mb-3" onclick="printTriangle()">Show Pattern</button>
+  <pre id="output" class="fs-5 text-start"></pre>
+</div>
+
+<script>
+function printTriangle() {
+  let rows = 5;
+  let output = "";
+  let i = 1;
+
+  while (i <= rows) {
+    let j = 1;
+    while (j <= i) {
+      output += "* ";
+      j++;
+    }
+    output += "\n";
+    i++;
+  }
+
+  document.getElementById("output").textContent = output;
+}
+</script>
+
+</body>
+</html>
