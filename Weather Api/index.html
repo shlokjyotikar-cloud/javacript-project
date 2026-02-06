@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <style>
+    /* Reset default margins */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #1fb645, #fcff40);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .weather-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 350px;
+    }
+
+    .weather-container h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    #cityInput {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #484848;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #b92976;
+    }
+
+    #weatherResult {
+      margin-top: 20px;
+      text-align: left;
+      background: #f1f1f1;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    #weatherResult img {
+      display: block;
+      margin: 10px auto;
+    }
+
+    #weatherResult h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    #weatherResult p {
+      margin: 5px 0;
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="weather-container">
+
+    <h1>Weather App</h1>
+
+    <input type="text" id="cityInput" placeholder="Enter city name" />
+
+    <button onclick="getWeather()">Get Weather</button>
+
+    <div id="weatherResult"></div>
+
+  </div>
+
+  <script src="wapi.js"></script>
+
+</body>
+
+</html>
+
+
